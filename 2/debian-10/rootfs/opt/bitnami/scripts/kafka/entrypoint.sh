@@ -13,6 +13,7 @@ set -o pipefail
 . /opt/bitnami/scripts/libkafka.sh
 
 # Load Kafka environment variables
+. /opt/bitnami/scripts/kafka/rainbond-env.sh
 . /opt/bitnami/scripts/kafka-env.sh
 
 print_welcome_page

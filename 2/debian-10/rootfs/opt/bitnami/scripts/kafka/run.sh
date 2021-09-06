@@ -12,6 +12,7 @@ set -o pipefail
 . /opt/bitnami/scripts/libos.sh
 
 # Load Kafka environment variables
+. /opt/bitnami/scripts/kafka/rainbond-env.sh
 . /opt/bitnami/scripts/kafka-env.sh
 
 if [[ "${KAFKA_CFG_LISTENERS:-}" =~ SASL ]] || [[ "${KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP:-}" =~ SASL ]] || [[ "${KAFKA_ZOOKEEPER_PROTOCOL:-}" =~ SASL ]]; then
