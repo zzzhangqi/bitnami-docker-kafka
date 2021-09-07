@@ -7,7 +7,7 @@ set -o pipefail
 ## This script works with Rainbond
 
 # define kafka broker id
-KAFKA_CFG_BROKER_ID=${HOSTNAME#*-}
+# KAFKA_CFG_BROKER_ID=${HOSTNAME#*-}
 
 # define zk server Addr
 if [ -z $DEPEND_SERVICE ]; then
