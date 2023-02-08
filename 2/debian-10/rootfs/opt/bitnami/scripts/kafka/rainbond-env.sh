@@ -11,8 +11,7 @@ KAFKA_CFG_BROKER_ID=${HOSTNAME#*-}
 
 # define zk server Addr
 if [ -z $DEPEND_SERVICE ]; then
-    ZooKeeperServer=$(nslookup ${DEPEND_SERVICE%:*} | grep Address | sed '1d' | awk '{print $2":2181"}')
-    export KAFKA_CFG_ZOOKEEPER_CONNECT=$(echo $ZooKeeperServer | tr ' ' ',')
+    export KAFKA_CFG_ZOOKEEPER_CONNECT=${ZOOKEEPER_HOST}:${ZOOKEEPER_PORT}
 fi
 
 # set default_java_mem_opts
